@@ -1,0 +1,62 @@
+package org.example;
+
+public class Libro {
+    private String isbn;
+    private String titulo;
+    private String autor;
+    private String genero;
+    private int ejemplares;
+
+    public Libro(String isbn, String titulo, String autor, int ejemplares, String genero) {
+        this.isbn = isbn;
+        this.titulo = titulo;
+        this.autor = autor;
+        this.ejemplares = ejemplares;
+        this.genero = genero;
+    }
+
+    public String getIsbn() {
+        return isbn;
+    }
+
+    public String getTitulo() {
+        return titulo;
+    }
+
+    public String getAutor() {
+        return autor;
+    }
+
+    public int getEjemplares() {
+        return ejemplares;
+    }
+
+    public String getGenero() {
+        return genero;
+    }
+
+    public void setIsbn(String isbn) {
+        this.isbn = isbn;
+    }
+
+    public void setTitulo(String titulo) {
+        this.titulo = titulo;
+    }
+
+    public void setAutor(String autor) {
+        this.autor = autor;
+    }
+
+    public void setGenero(String genero) {
+        this.genero = genero;
+    }
+
+    public void setEjemplares(int ejemplares) {
+        this.ejemplares = ejemplares;
+    }
+
+    @Override
+    public String toString() {
+        return isbn + " - " + titulo + " - " + autor + " - " + genero + " - " + ejemplares;
+    }
+}
