@@ -137,9 +137,35 @@ public class Biblioteca2027 {
     }
 
     private void nuevoLibro () {
-        System.out.println();
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Vamos a  crear un nuevo libro.");
+        System.out.println("ISBN:");
+        String isbn = sc.nextLine();
+        System.out.println("Título:");
+        String titulo = sc.nextLine();
+        System.out.println("Autor:");
+        String autor = sc.nextLine();
+        System.out.println("Género:");
+        String genero = sc.nextLine();
+        System.out.println("Unidades:");
+        int unidades = sc.nextInt();
 
-        libros.add(new Libro(""))
+        libros.add(new Libro(isbn, titulo, autor, genero, unidades));
+    }
+
+    private void eliminarLibro () {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Vamos a  eliminar un nuevo libro.");
+        System.out.println("Dime el nombre del libro que quieras eliminar: ");
+        String nombre = sc.nextLine();
+
+        for (Libro l : libros) {
+            if (l.getTitulo().equalsIgnoreCase(nombre)) {
+                libros.remove(l);
+            }
+        }
+
+
     }
 
     private void menuUsers() {
