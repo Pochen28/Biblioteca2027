@@ -232,6 +232,27 @@ public class Biblioteca2027 {
         } while (opcion != 9);
     }
 
+    private void nuevoPrestamo () {
+        Scanner sc = new Scanner (System.in);
+        System.out.println("Teclea ISBN libro:");
+        String isbn = sc.next();
+
+        System.out.println("Teclea DNI usuario;");
+        String dni = sc.next();
+
+        LocalDate hoy = LocalDate.now();
+        hoy.plusDays(15);
+
+    }
+
+    private void buscarUser () {
+        Scanner sc = new Scanner (System.in);
+        String dni = sc.next();
+        if (users.contains(dni))
+        ;
+
+    }
+
     private void menuListados() {
         Scanner sc = new Scanner(System.in);
         int opcion = 0;
